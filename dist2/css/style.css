@@ -24,6 +24,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 500px) {
+  .slides-navigation {
+    visibility: hidden;
+  }
+}
 
 .slides-navigation a.prev {
   left: 20px;
