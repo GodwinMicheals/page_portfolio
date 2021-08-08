@@ -26,11 +26,29 @@ $(document).ready(function() {
 
 	var typed = new Typed(".typed", {
 		strings: ["UI/UX Designer.", "Web Developer.", "Student.", "Software Developer.", "Entrepreneur."],
-		typeSpeed: 70,
+		typeSpeed: 70*1.5,
 		loop: true,
-		startDelay: 1000,
-		showCursor: false
+		startDelay: 200,
+		showCursor: true,
+		fadeOut: true
 	});
+
+	$('.typed-cursor').addClass('cursor-typed'); 
+	
+	console.log($('.navbar-toggler > span')[0].classList.value == 'navbar-toggler-icon' );
+
+	$('.navbar-toggler').click( function(){
+
+		if($('.navbar-toggler > span')[0].classList.value == 'navbar-toggler-icon'){
+			$('.navbar-toggler > span').toggleClass();			
+			$('.navbar-toggler > span').addClass('bi-x-lg white');
+		}else{
+			$('.navbar-toggler > span').toggleClass();
+			$('.navbar-toggler > span').addClass('navbar-toggler-icon');
+		}
+
+	});
+
 
 	$('.owl-carousel').owlCarousel({
 	    loop:true,
